@@ -7,4 +7,4 @@ Each step in the application development process is divided into individual `git
 
 ### `step1-setup`
 
-This branch initializes the `package.json` file and installs the module and development dependencies.
+This branch initializes the `package.json` file and installs the peer and development dependencies.
