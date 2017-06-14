@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/michaeldperez/teambuilder/issues"
   },
-  "homepage": "https://github.com/michaeldperez/teambuilder#readme"
+  "homepage": "https://github.com/michaeldperez/teambuilder#readme",
+  "engines": {
+    "node" : ">=7.6.0"
+  }
 }
