@@ -1,0 +1,26 @@
+{
+  "name": "teambuilder",
+  "version": "0.0.1",
+  "description": "Simple MEAN stack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeldperez/teambuilder.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express.js",
+    "Angular.js",
+    "Node.js",
+    "MEAN"
+  ],
+  "author": "Michael D. Perez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaeldperez/teambuilder/issues"
+  },
+  "homepage": "https://github.com/michaeldperez/teambuilder#readme"
+}
