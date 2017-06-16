@@ -1,5 +1,6 @@
 // Karma configuration
 // Generated on Thu Jun 15 2017 12:49:12 GMT-0700 (PDT)
+var babel = require('rollup-plugin-babel');
 
 module.exports = function(config) {
   config.set({
@@ -22,14 +23,16 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      './protractor.conf.js'
     ],
 
 
     rollupPreprocessor: {
         plugins: [
-            'rollup-plugin-babel'
+            babel()
         ],
         format: 'iife',
+        moduleName: 'example',
         sourceMap: 'inline'
     },
 
@@ -37,6 +40,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
         '../test/unit/*.js': ['rollup'],
+        './**/*.js': ['rollup'],
         // 'client/**/*.js': ['babel'],
         // 'test/unit/*.js': ['babel']
     },
