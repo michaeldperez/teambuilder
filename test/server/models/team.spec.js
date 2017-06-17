@@ -1,7 +1,6 @@
 import { expect }         from 'chai';
 import { ObjectId }       from 'mongodb';
 import { internet, name } from 'faker';
-import deepMatch          from 'chai-deep-match';
 import Database           from '../../../server/db/db';
 import Team               from '../../../server/models/team';
 
