@@ -5,10 +5,18 @@ export default class Database {
     this.connection = null;
   }
 
+  /**
+   * Returns database connection
+   * @return { object } database connection
+   */
   get() {
     return this.connection;
   }
 
+  /**
+   * Closes database connection
+   * @return nothing
+   */
   close() {
     if (this.connection) {
       this.connection.close();
@@ -16,12 +24,16 @@ export default class Database {
     }
   }
 
+  /**
+   * Connects to a given database
+   * @param { string } dbName - database name
+   * @return nothing
+   */
   connect(dbName) {
     const self = this;
     return MongoClient.connect(dbName)
                .then(db => {
                   self.connection = db;
-                  // return self.connection;
                });
   }
 }
