@@ -26,12 +26,12 @@ export default class Database {
 
   /**
    * Connects to a given database
-   * @param { string } dbName - database name
+   * @param { string } dbConnection - database connection string
    * @return nothing
    */
-  connect(dbName) {
+  connect(dbConnection) {
     const self = this;
-    return MongoClient.connect(dbName)
+    return MongoClient.connect(dbConnection)
                .then(db => {
                   self.connection = db;
                });
