@@ -33,7 +33,7 @@ describe('team model tests', function() {
   });
 
   beforeEach(function(done) {
-    sampleTeam = {name: 'Generic Team 0', members: [
+    sampleTeam = {name: 'Generic Team 4', members: [
       createMember(),
       createMember(),
       createMember()
@@ -111,6 +111,43 @@ describe('team model tests', function() {
         })
         .catch(err => {
           console.log(`An erro occurred retrieving team: ${err.message}`);
+        });
+  });
+
+  it('add should add a valid team', function(done) {
+    team.add('teams', sampleTeam)
+        .then(() => {
+          return team.all('teams');
+        })
+        .then(teams => {
+          expect(teams[3].name).to.equal('Generic Team 4');
+          done();
+        })
+        .catch(err => {
+          console.log(`An error occurred adding team: ${err.message}`);
+        });
+  });
+
+  it('delete should remove an existing team', function(done) {
+    team.delete('teams', '123456789123')
+        .then(() => {
+          return team.all('teams');
+        })
+        .then(teams => {
+          expect(teams.length).to.equal(2);
+          done();
+        });
+  });
+
+  it('delete should return error if no team found', function(done) {
+    team.delete('teams', '000000000000')
+        .then(() => {
+          expect(true).to.be.false; // this should not be reached
+          done();
+        })
+        .catch(err => {
+          expect(err).to.be.instanceof(Error);
+          done();
         });
   });
 });
