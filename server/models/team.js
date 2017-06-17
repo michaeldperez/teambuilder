@@ -26,6 +26,30 @@ export default class Team {
   get(collectionName, id) {
     return this.db.get()
                   .collection(collectionName)
-                  .findOne({_id: new ObjectId(id)})
+                  .findOne({_id: new ObjectId(id)});
+  }
+
+  /**
+   * Adds a team to a given collection
+   * @param { string } collectionName - name of database collection
+   * @param { object } team - team object
+   * @return { promise } null - null promise
+   */
+  add(collectionName, team) {
+    return this.db.get()
+                  .collection(collectionName)
+                  .insertOne(team);
+  }
+
+  /**
+   * Removes a team from a given collection
+   * @param { string } collectionName - name of database collection
+   * @param { string } id - id of team in database
+   * @return { promise } null - null promise
+   */
+  delete(collectionName, id) {
+    return this.db.get()
+                  .collection(collectionName)
+                  .deleteOne({_id: new ObjectId(id)});
   }
 }
