@@ -8,3 +8,11 @@ Each step in the application development process is divided into individual `git
 ### `step1-setup`
 
 This branch initializes the `package.json` file and installs the peer and development dependencies.
+
+### `step2-server`
+
+This branch sets up the backend of the application
+
+- Database integration
+- Server
+- API
