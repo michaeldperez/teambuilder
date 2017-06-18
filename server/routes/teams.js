@@ -16,7 +16,7 @@ export default function(team) {
   });
 
   router.get('/:id', (req, res) => {
-    const id         = req.params.id;
+    const id = req.params.id;
 
     team.get(collection, id)
         .then(team => {
@@ -29,7 +29,7 @@ export default function(team) {
   });
 
   router.post('/', (req, res) => {
-    const teamToAdd  = req.body;
+    const teamToAdd = req.body;
 
     team.add(collection, teamToAdd)
         .then(() => {
