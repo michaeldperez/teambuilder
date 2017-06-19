@@ -9,14 +9,6 @@ export default {
   format: 'iife',
   moduleName: 'teambuilder',
   sourceMap: true,
-  globals: {
-    'angular': 'angular',
-    'angular-ui-router': 'uiRouter'
-  },
-  // external:[
-  //   'angular',
-  //   'angular-ui-router'
-  // ],
   plugins: [
     resolve({
       customResolveOptions: {
