@@ -1,3 +1,4 @@
+import path       from 'path';
 import express    from 'express';
 import bodyParser from 'body-parser';
 import Teams      from './routes/teams';
@@ -8,6 +9,7 @@ const db = new Database();
 const app = express();
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '..')));
 
 let team
   , teams;
