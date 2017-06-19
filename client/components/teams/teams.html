@@ -1,0 +1,10 @@
+<div>
+  <ul ng-repeat="team in $ctrl.teamsData">
+    <li><a ui-sref="team({teamId: team._id})">{{team.name}}</a></li>
+    <li>Created: {{team.createdAt}}</li>
+    <li>Members: {{$ctrl.countMembers(team.members)}}</li>
+  </ul>
+  <div>
+    <button ngClick="$ctrl.goToAdd()">Add Team</button>
+  </div>
+</div>
