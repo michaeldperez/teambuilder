@@ -17,6 +17,13 @@ export default function uiRouterConfig($stateProvider, $urlRouterProvider) {
   //   }
   // };
 
+  const create = {
+    name: 'create',
+    url: '/create',
+    component: 'create'
+  };
+
   $stateProvider.state(teams);
+  $stateProvider.state(create);
   $urlRouterProvider.otherwise('/');
 }
