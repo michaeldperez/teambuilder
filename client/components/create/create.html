@@ -1,0 +1,41 @@
+<div>
+  <h3>Create a new team</h3>
+  <div>
+    <label>Name: </label><input type="text" ng-model="$ctrl.team.name"><br/><br/>
+    <label>Members: </label><br/><br/>
+    <label>Member 1:</label><br/>
+
+      <label>First name: </label><input type="text" ng-model="$ctrl.member1.firstname"><br/>
+      <label>Last name: </label><input type="text" ng-model="$ctrl.member1.lastname"><br/>
+      <label>Email: </label><input type="text" ng-model="$ctrl.member1.email"><br/>
+      <label>Job Title: </label><input type="text" ng-model="$ctrl.member1.jobtitle"><br/>
+
+      <br/><br/>
+
+      <label>Member 2:</label><br/>
+      <label>First name: </label><input type="text" ng-model="$ctrl.member2.firstname"><br/>
+      <label>Last name: </label><input type="text" ng-model="$ctrl.member2.lastname"><br/>
+      <label>Email: </label><input type="text" ng-model="$ctrl.member2.email"><br/>
+      <label>Job Title: </label><input type="text" ng-model="$ctrl.member2.jobtitle"><br/>
+
+      <br/><br/>
+
+      <label>Member 3:</label><br/>
+      <label>First name: </label><input type="text" ng-model="$ctrl.member3.firstname"><br/>
+      <label>Last name: </label><input type="text" ng-model="$ctrl.member3.lastname"><br/>
+      <label>Email: </label><input type="text" ng-model="$ctrl.member3.email"><br/>
+      <label>Job Title: </label><input type="text" ng-model="$ctrl.member3.jobtitle"><br/>
+  </div>
+  <div>
+    <p>Name: {{$ctrl.team.name}}</p>
+    <p>Members: </p>
+    <ul>
+      <li ng-if="$ctrl.member1.firstname && $ctrl.member1.lastname">{{$ctrl.getFullName($ctrl.member1)}}</li>
+      <li ng-if="$ctrl.member2.firstname && $ctrl.member2.lastname">{{$ctrl.getFullName($ctrl.member2)}}</li>
+      <li ng-if="$ctrl.member3.firstname && $ctrl.member3.lastname">{{$ctrl.getFullName($ctrl.member3)}}</li>
+    </ul>
+  </div>
+  <div>
+    <button ng-click="$ctrl.createTeam()">Create</button>
+  </div>
+</div>
