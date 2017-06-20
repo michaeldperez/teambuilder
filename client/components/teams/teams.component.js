@@ -1,11 +1,11 @@
 import TeamsController from './teams.controller';
-import template        from './teams.html';
+import teamsTemplate   from './teams.html';
 
 const TeamsComponent = {
   bindings: {
     teamsData: '<'
   },
-  template,
+  template: teamsTemplate,
   controller: TeamsController
 };
 
