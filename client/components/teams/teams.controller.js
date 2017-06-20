@@ -13,11 +13,11 @@ export default class TeamsController {
   }
 
   /**
-   * Navigates to add team page
+   * Navigates to create team page
    * @return nothing
    */
-  goToAdd() {
-    this.$state.go('add');
+  goToCreate() {
+    this.$state.go('create');
   }
 }
 
