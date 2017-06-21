@@ -1,0 +1,14 @@
+<div>
+  <h3>{{$ctrl.teamData.name}}</h3>
+  <p>Created: {{$ctrl.teamData.createdAt | date : 'mediumDate'}}</p>
+  <p>Team members:</p>
+    <member ng-repeat = 'member in $ctrl.teamData.members'
+            firstname = '{{member.firstname}}'
+            lastname  = '{{member.lastname}}'
+            email     = '{{member.email}}'
+            jobtitle  = '{{member.jobtitle}}'></member>
+  <div>
+    <button ng-click="$ctrl.delete()">Delete Team</button>
+    <button ng-click="$ctrl.goToHome()">Back</button>
+  </div>
+</div>
