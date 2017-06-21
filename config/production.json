@@ -1,0 +1,12 @@
+{
+  "mongodb": {
+    "hosts": [
+      {
+        "host": "ds133582.mlab.com",
+        "port": 33582
+      }
+    ],
+    "database": "teambuilder",
+    "username": "perezmi"
+  }
+}
