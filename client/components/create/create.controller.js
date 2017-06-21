@@ -24,7 +24,6 @@ export default class CreateController {
   createTeam() {
     this.team.members = [this.member1, this.member2, this.member3];
     this.team.createdAt = new Date();
-    console.log(this.team);
 
     return this.createService.create(this.team)
                            .then(() => this.$state.go('teams'));
