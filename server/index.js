@@ -12,6 +12,7 @@ const app = express();
 const connectionString = mongodbUri.format(config.get('mongodb'));
 console.log(`Env: ${process.env.NODE_ENV}`)
 console.log(`Connection: ${connectionString}`);
+app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..')));
 
@@ -28,6 +29,6 @@ db.connect(connectionString)
     console.log(`Error: ${err.message}`);
   });
 
-app.listen(3000, () => {
-  console.log(`App listening on port 3000`);
+app.listen(app.get('port'), () => {
+  console.log(`App listening on port ${app.get('port')}`);
 });
