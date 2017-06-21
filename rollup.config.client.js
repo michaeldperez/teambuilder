@@ -13,7 +13,7 @@ export default {
     resolve({
       customResolveOptions: {
         moduleDirectory: 'node_modules'
-      }
+      },
     }),
     commonjs({
       include: 'node_modules/**'

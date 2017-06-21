@@ -1,3 +1,5 @@
+import resolve  from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default {
   entry: 'server/index.js',
@@ -7,7 +9,18 @@ export default {
     'mongodb',
     'express',
     'body-parser',
-    'path'
+    'path',
+    'config',
+    'mongodb-uri'
   ],
-  plugins: []
+  plugins: [
+    resolve({
+      customResolveOptions: {
+        moduleDirectory: 'node_modules'
+      },
+      "jsnext": true,
+      "main": true
+    }),
+    commonjs()
+  ]
 };
