@@ -10,7 +10,8 @@ import Database   from './db/db';
 const db = new Database();
 const app = express();
 const connectionString = mongodbUri.format(config.get('mongodb'));
-
+console.log(`Env: ${process.env.NODE_ENV}`)
+console.log(`Connection: ${connectionString}`);
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..')));
 
