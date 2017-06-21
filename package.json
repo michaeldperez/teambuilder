@@ -4,7 +4,7 @@
   "description": "Simple MEAN stack app",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && NODE_ENV='production' node dist/server",
+    "start": "npm run build && node dist/server",
     "test": "./node_modules/.bin/_mocha",
     "test-client": "npm run test-client-unit && npm run test-client-e2e",
     "test-client-unit": "./node_modules/.bin/karma start client/karma.conf.js",
