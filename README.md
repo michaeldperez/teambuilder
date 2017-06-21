@@ -1,5 +1,5 @@
 # Teambuilder
-Simple web application serving as a workshop tutorial introducing team members to the MEAN stack.
+Simple web application serving as a workshop tutorial introducing team members to the MEAN (`MongoDB, Express.js, Angular.js, Node.js`) stack.
 
 Each step in the application development process is divided into individual `git` branches corresponding to project tasks.
 
@@ -16,3 +16,10 @@ This branch sets up the backend of the application
 - Database integration
 - Server
 - API
+
+### `step3-client`
+
+This branch sets up the `angular.js` client
+
+- Components
+- Client-side routing
