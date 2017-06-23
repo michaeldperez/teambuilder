@@ -9,9 +9,7 @@ export default {
     'mongodb',
     'express',
     'body-parser',
-    'path',
-    'config',
-    'mongodb-uri'
+    'path'
   ],
   plugins: [
     resolve({
