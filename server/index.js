@@ -9,9 +9,11 @@ import Database   from './db/db';
 
 const db = new Database();
 const app = express();
-const connectionString = mongodbUri.format(config.get('mongodb'));
-console.log(`Env: ${process.env.NODE_ENV}`)
-console.log(`Connection: ${connectionString}`);
+// const connectionString = mongodbUri.format(config.get('mongodb'));
+// console.log(`Env: ${process.env.NODE_ENV}`)
+// console.log(`Connection: ${connectionString}`);
+const connectionString = process.env.DATABASE_URL;
+console.log(`DB: ${connectionString}`);
 app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..')));
