@@ -2,5 +2,7 @@ node_modules
 package-lock.json
 dist
 config/local-*
+foreman-*
+foreman.conf
 /*.env
 .DS_Store
