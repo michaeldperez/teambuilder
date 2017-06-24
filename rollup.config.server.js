@@ -5,11 +5,14 @@ export default {
   entry: 'server/index.js',
   dest: 'dist/server/index.js',
   format: 'cjs',
+  sourceMap: true,
   external: [
     'mongodb',
     'express',
     'body-parser',
-    'path'
+    'path',
+    'mongodb-uri',
+    'config'
   ],
   plugins: [
     resolve({
