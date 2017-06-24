@@ -1,6 +1,8 @@
 import path       from 'path';
+import config     from 'config';
 import express    from 'express';
 import bodyParser from 'body-parser';
+import mongodbUri from 'mongodb-uri';
 import Teams      from './routes/teams';
 import Team       from './models/team';
 import Database   from './db/db';
@@ -8,7 +10,7 @@ import Database   from './db/db';
 const db = new Database();
 const app = express();
 
-const connectionString = process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL || mongodbUri.format(config.get('mongodb'));
 
 app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
