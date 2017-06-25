@@ -28,6 +28,14 @@ export default class CreateController {
     return this.createService.create(this.team)
                            .then(() => this.$state.go('teams'));
   }
+
+  /**
+   * Navigates to main page
+   * return nothing
+   */
+  goToHome() {
+    this.$state.go('teams');
+  }
 }
 
 CreateController.$inject = ['$state', 'CreateService'];
