@@ -1,6 +1,8 @@
 # Teambuilder
 Simple web application serving as a workshop tutorial introducing team members to the MEAN (`MongoDB, Express.js, Angular.js, Node.js`) stack.
 
+View deployed app [here](https://ssl-teambuilder.herokuapp.com/)
+
 Each step in the application development process is divided into individual `git` branches corresponding to project tasks.
 
 ## Branches
@@ -23,6 +25,3 @@ This branch sets up the `angular.js` client
 
 - Components
 - Client-side routing
-
-
-View deployed app [here](https://ssl-teambuilder.herokuapp.com/)
