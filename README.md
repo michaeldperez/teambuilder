@@ -25,4 +25,4 @@ This branch sets up the `angular.js` client
 - Client-side routing
 
 
-View deployed app [here] (https://ssl-teambuilder.herokuapp.com/)
+View deployed app [here](https://ssl-teambuilder.herokuapp.com/)
